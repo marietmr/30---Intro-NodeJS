@@ -1,0 +1,19 @@
+{
+  "name": "package-test",
+  "version": "1.0.0",
+  "description": "test",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "jest": "^28.0.0",
+    "nodemon": "^3.1.9",
+    "package-test": "^0.0.0"
+  }
+}
