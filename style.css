@@ -1,1 +1,26 @@
-* { font-family: Arial, sans-serif; }
+* { 
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    background-color:rgb(172, 191, 178);
+}
+
+
+button {
+    border-radius: 4px;
+    background-color: white;
+    border: none;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    transition: all 0.5s;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    width: auto;
+}
