@@ -10,25 +10,27 @@ function createFolderAndFile(folderPath, fileName, content = ''){
     fs.mkdirSync(folderPath, { recursive: true});
   }
 
-  //Créer le fichier et y ajouter du contenu
+  //Créer le fichier s'il n'existe pas
   const filePath = path.join(folderPath, fileName);
-  fs.writeFileSync(filePath, content);
+  if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, content);
+  }
 }
 
 //Créer fichier à la racine
-createFolderAndFile('.', 'index.html', '<html><body><h1>Welcome</h1></body></html>');
+createFolderAndFile('.', 'index.html', '<html><link rel="stylesheet" href="style.css"><body><h1>Welcome</h1></body></html>');
 createFolderAndFile('.', 'style.css', '* { font-family: Arial, sans-serif; }');
 
 // Créer les dossiers et fichiers pour contact
-createFolderAndFile('contact', 'index.html', '<html><body><h1>Contact Page</h1></body></html>');
+createFolderAndFile('contact', 'index.html', '<html><link rel="stylesheet" href="style.css"><body><h1>Contact Page</h1></body></html>');
 createFolderAndFile('contact', 'style.css', '* { background-color: lightblue; }');
 
 // Créer les dossiers et fichiers pour about
-createFolderAndFile('about', 'index.html', '<html><body><h1>About Page</h1></body></html>');
+createFolderAndFile('about', 'index.html', '<html><link rel="stylesheet" href="style.css"><body><h1>About Page</h1></body></html>');
 createFolderAndFile('about', 'style.css', '* { background-color: lightgreen; }');
 
 // Créer les dossiers et fichiers pour blog
-createFolderAndFile('blog', 'index.html', '<html><body><h1>Blog Page</h1></body></html>');
+createFolderAndFile('blog', 'index.html', '<html><link rel="stylesheet" href="style.css"><body><h1>Blog Page</h1></body></html>');
 createFolderAndFile('blog', 'style.css', '* { background-color: lightyellow; }');
 
 console.log("La structure de fichiers a été créée avec succès !");
